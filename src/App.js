@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import {Route, BrowserRouter, Switch} from 'react-router-dom'
+import Background from './img/Background.jpg'
+import Logo from './img/Logo.jpeg'
+import Navbar from './Navbar'
+import Fact from './Fact'
+import FactTwo from './FactTwo'
+import FactThree from './FactThree'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <BrowserRouter>
+
+      <div>
+        <Navbar />
+        <br />
+        <img src={Logo} alt="Logo" />
+        <br />
+        <br />
+        <br />
+ <Switch>
+     <Route exact path='/FactOne' component={Fact}/>
+      <Route path='/FactTwo' component={FactTwo}/>
+      <Route path='/FactThree' component={FactThree} />
+     </Switch>
+     </div>
+      </BrowserRouter>
+    )
+  }
 }
 
-export default App;
+export default App
