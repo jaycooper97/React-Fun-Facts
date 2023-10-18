@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Mikasa from './img/Mikasa.jpg'
 
-import React from 'react'
+
 
 const Fact = () => {
   return (

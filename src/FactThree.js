@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Eren from './img/Eren.jpeg'
-import React from 'react'
+
 const FactThree = () => {
   return (
     <div>
